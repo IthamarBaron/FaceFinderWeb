@@ -6,7 +6,7 @@
     <style>
         /* Style for the hotbar */
         .hotbar {
-            background-color: #3498db; /* Change to a relaxing blue color */
+            background-color: #333; 
             display: flex;
             justify-content: space-around;
             padding: 10px;
@@ -18,10 +18,10 @@
 
         /* Style for the hotbar segments */
         .segment {
-            color: #fff; /* White text for better contrast */
+            color: #fff; 
             text-decoration: none;
             padding: 20px 40px;
-            border: 1px solid #2980b9; /* Slightly darker border color */
+            border: 1px solid #555; 
             border-radius: 5px;
             transition: background-color 0.3s;
             font-family: Arial;
@@ -29,7 +29,7 @@
 
         /* Hover effect for segments */
         .segment:hover {
-            background-color: #2980b9; /* Slightly darker background on hover */
+            background-color: #555; 
         }
 
         /* Style for each segment to take the entire screen height */
@@ -39,21 +39,21 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            text-align: right; /* Right-align text for Hebrew */
-            direction: rtl; /* Right-to-left text direction for Hebrew */
+            text-align: right; 
+            direction: rtl; 
         }
 
         /* Style for individual segments */
         .upload {
-            background-color: #ecf0f1; /* Light gray background */
+            background-color: #2c3e50;
         }
 
         .contact {
-            background-color: #d5dbdb; /* Lighter gray background */
+            background-color: #34495e; 
         }
 
         .found {
-            background-color: #c3d1d1; /* Even lighter gray background */
+            background-color: #2e4053; 
         }
         
         /* Style for the text and button inside segments */
@@ -62,12 +62,13 @@
         .found p {
             font-size: 24px;
             margin: 10px 0;
+            color: #ecf0f1; 
         }
 
         .upload button,
         .contact button,
         .found button {
-            background-color: #3498db; /* Match the hotbar background color */
+            background-color: #3498db; 
             color: #fff;
             border: none;
             border-radius: 5px;
@@ -81,23 +82,24 @@
         .upload button:hover,
         .contact button:hover,
         .found button:hover {
-            background-color: #2980b9; /* Slightly darker background on hover */
+            background-color: #2980b9; 
         }
 
         /* Style for the bullet points on the list */
         .found li {
-            text-align: right; /* Right-align text for Hebrew */
-            direction: rtl; /* Right-to-left text direction for Hebrew */
-            margin-right: 20px; /* Add margin to the right for spacing */
-            list-style: disc outside none; /* Remove default bullet points */
+            text-align: right; 
+            direction: rtl; 
+            margin-right: 20px; 
+            list-style: disc outside none; 
+            color: #ecf0f1;
         }
     </style>
 </head>
 <body>
     <div class="hotbar">
-        <a href="#upload" class="segment">העלת תמונה</a>
-        <a href="#contact" class="segment">צרו קשר</a>
         <a href="#found" class="segment">נמצאו</a>
+        <a href="#contact" class="segment">צרו קשר</a>
+        <a href="#upload" class="segment">העלת תמונה</a>
     </div>
 
     <div class="full-screen-segment upload" id="upload"> 
