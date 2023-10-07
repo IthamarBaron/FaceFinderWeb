@@ -3,10 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <style>
+        /* Style for the hotbar */
+        .hotbar {
+            background-color: #333;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+        }
 
+        /* Style for the hotbar segments */
+        .segment {
+            margin: 0 10px;
+            color: #2edf5a;
+            text-decoration: none;
+            padding: 20px 40px;
+            border: 1px solid #35e780;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            font-family: arial;
+        }
+
+        /* Hover effect for segments */
+        .segment:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
 <body>
-    
+    <div class="hotbar">
+        <a href="#" class="segment">צרו קשר</a>
+        <a href="#" class="segment">נמצאו</a>
+        <a href="#" class="segment">העלעת תמונה</a>
+    </div>
+
+    <div class = "upload"> 
+        <p>?מכירים מישהו ולא יודעים מה קורה איתו</p>
+        <p>העלו תמונה שלהם ונראה אם הוא נמצא</p>
+        <button>העלת תמונה</button> 
+    </div>
 </body>
 </html>
