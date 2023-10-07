@@ -6,41 +6,117 @@
     <style>
         /* Style for the hotbar */
         .hotbar {
-            background-color: #333;
+            background-color: #3498db; /* Change to a relaxing blue color */
             display: flex;
             justify-content: space-around;
             padding: 10px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
         }
 
         /* Style for the hotbar segments */
         .segment {
-            margin: 0 10px;
-            color: #2edf5a;
+            color: #fff; /* White text for better contrast */
             text-decoration: none;
             padding: 20px 40px;
-            border: 1px solid #35e780;
+            border: 1px solid #2980b9; /* Slightly darker border color */
             border-radius: 5px;
             transition: background-color 0.3s;
-            font-family: arial;
+            font-family: Arial;
         }
 
         /* Hover effect for segments */
         .segment:hover {
-            background-color: #555;
+            background-color: #2980b9; /* Slightly darker background on hover */
+        }
+
+        /* Style for each segment to take the entire screen height */
+        .full-screen-segment {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: right; /* Right-align text for Hebrew */
+            direction: rtl; /* Right-to-left text direction for Hebrew */
+        }
+
+        /* Style for individual segments */
+        .upload {
+            background-color: #ecf0f1; /* Light gray background */
+        }
+
+        .contact {
+            background-color: #d5dbdb; /* Lighter gray background */
+        }
+
+        .found {
+            background-color: #c3d1d1; /* Even lighter gray background */
+        }
+        
+        /* Style for the text and button inside segments */
+        .upload p,
+        .contact p,
+        .found p {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+
+        .upload button,
+        .contact button,
+        .found button {
+            background-color: #3498db; /* Match the hotbar background color */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+
+        .upload button:hover,
+        .contact button:hover,
+        .found button:hover {
+            background-color: #2980b9; /* Slightly darker background on hover */
+        }
+
+        /* Style for the bullet points on the list */
+        .found li {
+            text-align: right; /* Right-align text for Hebrew */
+            direction: rtl; /* Right-to-left text direction for Hebrew */
+            margin-right: 20px; /* Add margin to the right for spacing */
+            list-style: disc outside none; /* Remove default bullet points */
         }
     </style>
 </head>
 <body>
     <div class="hotbar">
-        <a href="#" class="segment">צרו קשר</a>
-        <a href="#" class="segment">נמצאו</a>
-        <a href="#" class="segment">העלעת תמונה</a>
+        <a href="#upload" class="segment">העלת תמונה</a>
+        <a href="#contact" class="segment">צרו קשר</a>
+        <a href="#found" class="segment">נמצאו</a>
     </div>
 
-    <div class = "upload"> 
+    <div class="full-screen-segment upload" id="upload"> 
         <p>?מכירים מישהו ולא יודעים מה קורה איתו</p>
         <p>העלו תמונה שלהם ונראה אם הוא נמצא</p>
         <button>העלת תמונה</button> 
+    </div>
+
+    <div class="full-screen-segment contact" id="contact">
+        <p>?מצאתם טעות או שיש לכם משהו לספר לנו</p>
+        <p>lorem.impsum@gmail.com :אימייל</p>
+    </div>
+
+    <div class="full-screen-segment found" id="found">
+        <h2>נמצאים</h2>
+        <ul>
+            <li>לורם אימפסום</li>
+            <li>דולאר סית </li>
+        </ul>
     </div>
 </body>
 </html>
